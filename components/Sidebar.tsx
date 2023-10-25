@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import { Song } from "@/types";
 import usePlayer from "@/hooks/usePlayer";
 
-import SidebarItem from "./SidebarItem";
+import Sidebaritem from "./Sidebaritem";
 import Box from "./Box";
 import Library from "./Library";
 import { useMemo } from "react";
@@ -61,7 +61,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
             {routes.map((item) => (
-              <SidebarItem key={item.label} {...item} />
+              <Sidebaritem key={item.label} {...item} />
             ))}
           </div>
         </Box>
