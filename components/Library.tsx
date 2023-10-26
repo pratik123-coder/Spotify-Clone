@@ -7,6 +7,7 @@ import useUploadModal from "@/hooks/useUploadModel";
 import { Song } from "@/types";
 import MediaItem from "./MediaItem";
 import useOnPlay from "@/hooks/useOnPlay";
+import ListItem from "./ListItem";
 
 interface LibraryProps{
   songs: Song[];
@@ -42,6 +43,11 @@ const Library: React.FC<LibraryProps> = ({
       />
       </div>
       <div className="flex flex-col gap-y-2 mt-4 px-3">
+      <ListItem
+                image="/images/liked.png"
+                name="Liked songs"
+                href="liked"
+              />
           {songs.map((item)=>(
             <MediaItem 
             onClick={(id:string) => onPlay(id) }
