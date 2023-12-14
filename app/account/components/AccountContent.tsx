@@ -15,7 +15,7 @@ const AccountContent = () => {
       try {
         const { data, error } = await supabaseClient
           .from('users')
-          .select('id', 'full_name') // Include other fields as needed
+          .select('id', 'full_name', 'avatar_url')  // Include other fields as needed
           .eq('id', user?.id)
           .single();
 
